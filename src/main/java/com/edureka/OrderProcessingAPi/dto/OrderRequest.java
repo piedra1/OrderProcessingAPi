@@ -1,13 +1,23 @@
 package com.edureka.OrderProcessingAPi.dto;
 
-import lombok.Builder;
-import lombok.Data;
+
 
 import java.util.List;
 
-@Data
-@Builder
+
 public class OrderRequest {
 
     private List<Product> products;
+
+    public OrderRequest(List<Product> products) {
+        this.products = products;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
 }

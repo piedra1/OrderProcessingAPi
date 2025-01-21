@@ -9,13 +9,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/order")
 public class OrderProcessingController {
 
     @Autowired
     public OrderProcessService orderService;
 
-    @PostMapping("/order")
+    @PostMapping
     public ResponseEntity<OrderResponse> orderProducts(@RequestBody OrderRequest orderRequest) {
         OrderResponse order = orderService.placeOrder(orderRequest);
 

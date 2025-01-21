@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-@FeignClient(name = "payment-service", url = "http://localhost:8083")
+@FeignClient(name = "PaymentServiceAPI", url = "http://localhost:8083")
 public interface PaymentAPIClient {
 
     @GetMapping("/api/payment")
